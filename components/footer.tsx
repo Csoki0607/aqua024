@@ -131,14 +131,27 @@ export function Footer() {
         </div>
 
         {/* Bottom */}
-        <div className="mt-12 border-t border-primary-foreground/20 pt-8 text-center text-sm text-primary-foreground/60">
-          <p>&copy; {new Date().getFullYear()} Aqua024. Minden jog fenntartva.</p>
-        </div>
-        <div className="flex items-center justify-center gap-1 mt-2">
-          <span className="text-xs text-background/30">Készítette:</span>
-          <a href="https://www.meriondigital.hu" target="_blank" rel="noopener noreferrer" className="flex flex-col -space-y-1 hover:opacity-80 transition-opacity">
-            <span className="tracking-tight leading-tight text-sm text-background/90">Merion</span>
-            <span className="tracking-tight leading-tight text-sm text-background/50">DIGITAL</span>
+        <div className="mt-12 flex flex-col items-center justify-between gap-6 border-t border-primary-foreground/20 pt-8 sm:flex-row">
+          <p className="text-center text-sm text-primary-foreground/60 sm:text-left">
+            &copy; {new Date().getFullYear()} Aqua024. Minden jog fenntartva.
+          </p>
+          <a 
+            href="https://www.meriondigital.hu" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="group flex items-center gap-2 px-4 py-1.5 rounded-full bg-background/5 hover:bg-background/10 border border-transparent hover:border-background/10 transition-all duration-300"
+          >
+            <span className="text-xs text-background/40 group-hover:text-background/60 transition-colors">
+              Weboldal készítés:
+            </span>
+            <div className="flex flex-col -space-y-[2px]">
+              <span className="font-bold tracking-tight text-sm text-background/70 group-hover:text-background transition-colors">
+                Merion
+              </span>
+              <span className="text-[10px] font-black tracking-[0.2em] text-secondary/80 group-hover:text-secondary transition-colors">
+                DIGITAL
+              </span>
+            </div>
           </a>
         </div>
       </div>
