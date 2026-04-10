@@ -5,8 +5,9 @@ import './globals.css'
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import { MobileStickyBar } from '@/components/mobile-sticky-bar'
+import { SubscriptionWrapper } from "@/components/subscription-wrapper"
 
-const inter = Inter({ 
+const inter = Inter({
   subsets: ["latin", "latin-ext"],
   variable: '--font-inter'
 });
@@ -44,10 +45,14 @@ export default function RootLayout({
   return (
     <html lang="hu">
       <body className={`${inter.variable} font-sans antialiased`}>
-        <Header />
-        <main>{children}</main>
-        <Footer />
-        <MobileStickyBar />
+        <SubscriptionWrapper>
+          <Header />
+          <main>
+            {children}
+          </main>
+          <Footer />
+          <MobileStickyBar />
+        </SubscriptionWrapper>
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>
