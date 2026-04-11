@@ -152,6 +152,14 @@ export default function HomePage() {
             <div className="flex flex-col gap-5 sm:flex-row sm:items-center">
               <a
                 href={`tel:${PHONE_NUMBER}`}
+                onClick={(e) => {
+                  e.preventDefault();
+                  if (typeof window.gtag_report_conversion === 'function') {
+                    window.gtag_report_conversion(`tel:${PHONE_NUMBER}`);
+                  } else {
+                    window.location.href = `tel:${PHONE_NUMBER}`;
+                  }
+                }}
                 className="animate-pulse-glow inline-flex items-center justify-center gap-3 rounded-2xl bg-secondary px-8 py-4 text-xl font-bold text-primary transition-all hover:-translate-y-1 hover:bg-white hover:text-primary hover:shadow-[0_0_30px_rgba(14,165,233,0.5)]"
               >
                 <Phone className="h-6 w-6" />
@@ -279,6 +287,14 @@ export default function HomePage() {
                   <p className="mb-6 flex-grow font-light text-muted-foreground">{situation.description}</p>
                   <a
                     href={`tel:${PHONE_NUMBER}`}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      if (typeof window.gtag_report_conversion === 'function') {
+                        window.gtag_report_conversion(`tel:${PHONE_NUMBER}`);
+                      } else {
+                        window.location.href = `tel:${PHONE_NUMBER}`;
+                      }
+                    }}
                     className="inline-flex items-center gap-2 font-bold text-secondary transition-colors hover:text-primary"
                   >
                     <Phone className="h-5 w-5" />

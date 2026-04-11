@@ -147,6 +147,14 @@ export default function DugulasPage() {
             <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
               <a
                 href={`tel:${PHONE_NUMBER}`}
+                onClick={(e) => {
+                  e.preventDefault();
+                  if (typeof window.gtag_report_conversion === 'function') {
+                    window.gtag_report_conversion(`tel:${PHONE_NUMBER}`);
+                  } else {
+                    window.location.href = `tel:${PHONE_NUMBER}`;
+                  }
+                }}
                 className="inline-flex items-center justify-center gap-3 rounded-xl bg-accent px-8 py-4 text-xl font-bold text-accent-foreground transition-transform hover:scale-105"
               >
                 <Phone className="h-6 w-6" />
@@ -282,6 +290,14 @@ export default function DugulasPage() {
           </p>
           <a
             href={`tel:${PHONE_NUMBER}`}
+            onClick={(e) => {
+              e.preventDefault();
+              if (typeof window.gtag_report_conversion === 'function') {
+                window.gtag_report_conversion(`tel:${PHONE_NUMBER}`);
+              } else {
+                window.location.href = `tel:${PHONE_NUMBER}`;
+              }
+            }}
             className="inline-flex items-center gap-2 rounded-xl bg-accent px-8 py-4 text-lg font-bold text-accent-foreground transition-transform hover:scale-105"
           >
             <Phone className="h-5 w-5" />

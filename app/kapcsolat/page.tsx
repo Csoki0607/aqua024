@@ -161,6 +161,16 @@ export default function ContactPage() {
                 <p className="mb-4 text-muted-foreground">{method.description}</p>
                 <a
                   href={method.action}
+                  onClick={(e) => {
+                    if (method.action.startsWith('tel:') || method.action.startsWith('sms:')) {
+                      e.preventDefault();
+                      if (typeof window.gtag_report_conversion === 'function') {
+                        window.gtag_report_conversion(method.action);
+                      } else {
+                        window.location.href = method.action;
+                      }
+                    }
+                  }}
                   className={`inline-flex items-center gap-2 rounded-lg px-6 py-3 font-bold transition-transform hover:scale-105 ${method.primary
                     ? "bg-accent text-accent-foreground"
                     : "bg-secondary text-secondary-foreground"

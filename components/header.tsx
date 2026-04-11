@@ -92,6 +92,14 @@ export function Header() {
           <div className="flex items-center gap-4">
             <a
               href={`tel:${PHONE_NUMBER}`}
+              onClick={(e) => {
+                e.preventDefault();
+                if (typeof window.gtag_report_conversion === 'function') {
+                  window.gtag_report_conversion(`tel:${PHONE_NUMBER}`);
+                } else {
+                  window.location.href = `tel:${PHONE_NUMBER}`;
+                }
+              }}
               className="hidden items-center gap-2 rounded-lg bg-accent px-4 py-2 text-sm font-bold text-accent-foreground transition-transform hover:scale-105 sm:flex lg:px-6 lg:py-3 lg:text-base"
             >
               <Phone className="h-4 w-4 lg:h-5 lg:w-5" />
@@ -143,6 +151,14 @@ export function Header() {
               })}
               <a
                 href={`tel:${PHONE_NUMBER}`}
+                onClick={(e) => {
+                  e.preventDefault();
+                  if (typeof window.gtag_report_conversion === 'function') {
+                    window.gtag_report_conversion(`tel:${PHONE_NUMBER}`);
+                  } else {
+                    window.location.href = `tel:${PHONE_NUMBER}`;
+                  }
+                }}
                 className="mt-2 flex items-center justify-center gap-2 rounded-lg bg-accent px-4 py-3 text-base font-bold text-accent-foreground"
               >
                 <Phone className="h-5 w-5" />

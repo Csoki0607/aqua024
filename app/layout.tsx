@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
+import Script from 'next/script'
 import './globals.css'
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
@@ -54,6 +55,42 @@ export default function RootLayout({
           <MobileStickyBar />
         </SubscriptionWrapper>
         {process.env.NODE_ENV === 'production' && <Analytics />}
+        
+        {/* Google Tag (gtag.js) */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-18081709744"
+          strategy="afterInteractive"
+        />
+        <Script id="google-tag-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-18081709744');
+          `}
+        </Script>
+        <Script id="gtag-report-conversion" strategy="afterInteractive">
+          {`
+            window.gtag_report_conversion = function(url) {
+              var callback = function () {
+                if (typeof(url) != 'undefined') {
+                  window.location = url;
+                }
+              };
+              if (typeof gtag !== 'undefined') {
+                gtag('event', 'conversion', {
+                    'send_to': 'AW-18081709744/cuvUCI6KoZocELD9g65D',
+                    'value': 1.0,
+                    'currency': 'HUF',
+                    'event_callback': callback
+                });
+              } else {
+                callback();
+              }
+              return false;
+            }
+          `}
+        </Script>
       </body>
     </html>
   )
