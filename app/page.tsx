@@ -160,7 +160,7 @@ export default function HomePage() {
                 {PHONE_DISPLAY}
               </PhoneLink>
               <span className="text-base font-medium text-white/80">
-                Hívjon bátran - Ingyenes tanácsadás
+                Hívjon most!
               </span>
             </div>
 
