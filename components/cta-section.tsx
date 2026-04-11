@@ -1,3 +1,5 @@
+"use client"
+
 import { Phone, Clock, Shield, Zap } from "lucide-react"
 
 const PHONE_NUMBER = "+36305988450"

@@ -14,6 +14,8 @@ import {
 } from "lucide-react"
 import { CTASection } from "@/components/cta-section"
 
+import { PhoneLink } from "@/components/phone-link"
+
 const PHONE_NUMBER = "+36305988450"
 const PHONE_DISPLAY = "+36 30 598 8450"
 
@@ -150,21 +152,13 @@ export default function HomePage() {
             </p>
 
             <div className="flex flex-col gap-5 sm:flex-row sm:items-center">
-              <a
+              <PhoneLink
                 href={`tel:${PHONE_NUMBER}`}
-                onClick={(e) => {
-                  e.preventDefault();
-                  if (typeof window.gtag_report_conversion === 'function') {
-                    window.gtag_report_conversion(`tel:${PHONE_NUMBER}`);
-                  } else {
-                    window.location.href = `tel:${PHONE_NUMBER}`;
-                  }
-                }}
                 className="animate-pulse-glow inline-flex items-center justify-center gap-3 rounded-2xl bg-secondary px-8 py-4 text-xl font-bold text-primary transition-all hover:-translate-y-1 hover:bg-white hover:text-primary hover:shadow-[0_0_30px_rgba(14,165,233,0.5)]"
               >
                 <Phone className="h-6 w-6" />
                 {PHONE_DISPLAY}
-              </a>
+              </PhoneLink>
               <span className="text-base font-medium text-white/80">
                 Hívjon bátran - Ingyenes tanácsadás
               </span>
@@ -285,21 +279,13 @@ export default function HomePage() {
                     {situation.title}
                   </h3>
                   <p className="mb-6 flex-grow font-light text-muted-foreground">{situation.description}</p>
-                  <a
+                  <PhoneLink
                     href={`tel:${PHONE_NUMBER}`}
-                    onClick={(e) => {
-                      e.preventDefault();
-                      if (typeof window.gtag_report_conversion === 'function') {
-                        window.gtag_report_conversion(`tel:${PHONE_NUMBER}`);
-                      } else {
-                        window.location.href = `tel:${PHONE_NUMBER}`;
-                      }
-                    }}
                     className="inline-flex items-center gap-2 font-bold text-secondary transition-colors hover:text-primary"
                   >
                     <Phone className="h-5 w-5" />
                     Azonnali Segítség Kérése
-                  </a>
+                  </PhoneLink>
                 </div>
               </div>
             ))}

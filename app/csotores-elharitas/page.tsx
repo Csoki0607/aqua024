@@ -14,6 +14,7 @@ import {
 } from "lucide-react"
 import { CTASection } from "@/components/cta-section"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
+import { PhoneLink } from "@/components/phone-link"
 
 export const metadata: Metadata = {
   title: "Csőtörés Elhárítás 0-24 Budapest - Azonnali Segítség",
@@ -139,21 +140,13 @@ export default function CsotoresPage() {
               megelőzésében. 1-2 órán belül a helyszínen vagyunk és megoldjuk a problémát.
             </p>
             
-            <a
-              href={`tel:${PHONE_NUMBER}`}
-              onClick={(e) => {
-                e.preventDefault();
-                if (typeof window.gtag_report_conversion === 'function') {
-                  window.gtag_report_conversion(`tel:${PHONE_NUMBER}`);
-                } else {
-                  window.location.href = `tel:${PHONE_NUMBER}`;
-                }
-              }}
-              className="inline-flex items-center gap-3 rounded-xl bg-accent px-8 py-4 text-xl font-bold text-accent-foreground transition-transform hover:scale-105"
-            >
-              <Phone className="h-6 w-6" />
-              HÍVÁS MOST: {PHONE_DISPLAY}
-            </a>
+             <PhoneLink
+               href={`tel:${PHONE_NUMBER}`}
+               className="inline-flex items-center gap-3 rounded-xl bg-accent px-8 py-4 text-xl font-bold text-accent-foreground transition-transform hover:scale-105"
+             >
+               <Phone className="h-6 w-6" />
+               HÍVÁS MOST: {PHONE_DISPLAY}
+             </PhoneLink>
 
             <p className="mt-4 text-sm text-primary-foreground/80">
               Éjjel-nappal, hétvégén és ünnepnapokon is!
@@ -200,21 +193,13 @@ export default function CsotoresPage() {
           <p className="mb-4 text-lg font-bold text-accent-foreground">
             A víz folyik? Minden másodperc számít!
           </p>
-          <a
-            href={`tel:${PHONE_NUMBER}`}
-            onClick={(e) => {
-              e.preventDefault();
-              if (typeof window.gtag_report_conversion === 'function') {
-                window.gtag_report_conversion(`tel:${PHONE_NUMBER}`);
-              } else {
-                window.location.href = `tel:${PHONE_NUMBER}`;
-              }
-            }}
-            className="inline-flex items-center gap-3 rounded-xl bg-primary px-8 py-4 text-xl font-bold text-primary-foreground transition-transform hover:scale-105"
-          >
-            <Phone className="h-6 w-6" />
-            {PHONE_DISPLAY}
-          </a>
+           <PhoneLink
+             href={`tel:${PHONE_NUMBER}`}
+             className="inline-flex items-center gap-3 rounded-xl bg-primary px-8 py-4 text-xl font-bold text-primary-foreground transition-transform hover:scale-105"
+           >
+             <Phone className="h-6 w-6" />
+             {PHONE_DISPLAY}
+           </PhoneLink>
         </div>
       </section>
 

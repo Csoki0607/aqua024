@@ -10,6 +10,7 @@ import {
   MessageSquare
 } from "lucide-react"
 import { CTASection } from "@/components/cta-section"
+import { PhoneLink } from "@/components/phone-link"
 
 export const metadata: Metadata = {
   title: "Kapcsolat - Aqua024 Vízszerelő Budapest",
@@ -159,25 +160,15 @@ export default function ContactPage() {
                 </div>
                 <h3 className="mb-2 text-xl font-bold text-foreground">{method.title}</h3>
                 <p className="mb-4 text-muted-foreground">{method.description}</p>
-                <a
+                <PhoneLink
                   href={method.action}
-                  onClick={(e) => {
-                    if (method.action.startsWith('tel:') || method.action.startsWith('sms:')) {
-                      e.preventDefault();
-                      if (typeof window.gtag_report_conversion === 'function') {
-                        window.gtag_report_conversion(method.action);
-                      } else {
-                        window.location.href = method.action;
-                      }
-                    }
-                  }}
                   className={`inline-flex items-center gap-2 rounded-lg px-6 py-3 font-bold transition-transform hover:scale-105 ${method.primary
                     ? "bg-accent text-accent-foreground"
                     : "bg-secondary text-secondary-foreground"
                     }`}
                 >
                   {method.actionText}
-                </a>
+                </PhoneLink>
                 {method.primary && (
                   <p className="mt-3 text-sm text-secondary font-medium">
                     Sürgős esetben ez a leggyorsabb!
