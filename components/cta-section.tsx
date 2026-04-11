@@ -40,14 +40,6 @@ export function CTASection({
         
         <a
           href={`tel:${PHONE_NUMBER}`}
-          onClick={(e) => {
-            e.preventDefault();
-            if (typeof window.gtag_report_conversion === 'function') {
-              window.gtag_report_conversion(`tel:${PHONE_NUMBER}`);
-            } else {
-              window.location.href = `tel:${PHONE_NUMBER}`;
-            }
-          }}
           className={`inline-flex items-center gap-3 rounded-2xl px-10 py-5 text-xl font-bold transition-all sm:text-2xl ${
             isUrgent 
               ? "animate-pulse-glow bg-secondary text-primary hover:-translate-y-1 hover:shadow-xl" 
