@@ -55,12 +55,11 @@ export default function RootLayout({
           <MobileStickyBar />
         </SubscriptionWrapper>
         {process.env.NODE_ENV === 'production' && <Analytics />}
-        
-      <head>
+
         {/* --- Google Tag (gtag.js) --- */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=AW-18081709744"
-          strategy="lazyOnload"
+          strategy="afterInteractive"
         />
         <Script id="gtag-base" strategy="afterInteractive">
           {`
@@ -125,7 +124,6 @@ export default function RootLayout({
             })();
           `}
         </Script>
-      </head>
       </body>
     </html>
   )
