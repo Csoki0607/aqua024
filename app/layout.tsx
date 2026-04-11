@@ -56,12 +56,13 @@ export default function RootLayout({
         </SubscriptionWrapper>
         {process.env.NODE_ENV === 'production' && <Analytics />}
         
-        {/* Google Tag (gtag.js) */}
+      <head>
+        {/* --- Google Tag (gtag.js) --- */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=AW-18081709744"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
-        <Script id="google-tag-init" strategy="afterInteractive">
+        <Script id="gtag-base" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
@@ -69,30 +70,62 @@ export default function RootLayout({
             gtag('config', 'AW-18081709744');
           `}
         </Script>
-        
-        {/* Event snippet for Kattint és hív conversion page */}
-        <Script id="gtag-report-conversion" strategy="afterInteractive">
+
+        {/* --- Google Ads Conversion helper --- */}
+        <Script id="gtag-call-helper" strategy="afterInteractive">
           {`
-            function gtag_report_conversion(url) {
+            window.gtag_report_conversion = function (url) {
               var callback = function () {
-                if (typeof(url) != 'undefined') {
+                if (typeof url !== 'undefined') {
                   window.location = url;
                 }
               };
-              if (typeof gtag !== 'undefined') {
-                gtag('event', 'conversion', {
-                    'send_to': 'AW-18081709744/cuvUCI6KoZocELD9g65D',
-                    'value': 1.0,
-                    'currency': 'HUF',
-                    'event_callback': callback
+              if (typeof window.gtag === 'function') {
+                window.gtag('event', 'conversion', {
+                  'send_to': 'AW-18081709744/cuvUCI6KoZocELD9g65D',
+                  'event_callback': callback
                 });
               } else {
                 callback();
               }
               return false;
-            }
+            };
           `}
         </Script>
+
+        {/* --- Automatikus tel: link figyelés --- */}
+        <Script id="tel-auto-conversion" strategy="afterInteractive">
+          {`
+            (function () {
+              function findAnchor(el) {
+                while (el && el !== document.body) {
+                  if (el.tagName === 'A') return el;
+                  el = el.parentElement;
+                }
+                return null;
+              }
+              document.addEventListener('click', function (e) {
+                var t = e.target;
+                var a = t ? findAnchor(t) : null;
+                if (!a) return;
+
+                var href = (a.getAttribute('href') || '').trim();
+                if (/^tel:/i.test(href)) {
+                  try {
+                    if (typeof window.gtag_report_conversion === 'function') {
+                      window.gtag_report_conversion();
+                    } else if (typeof window.gtag === 'function') {
+                      window.gtag('event', 'conversion', {
+                        'send_to': 'AW-18081709744/cuvUCI6KoZocELD9g65D'
+                      });
+                    }
+                  } catch (err) {}
+                }
+              }, true);
+            })();
+          `}
+        </Script>
+      </head>
       </body>
     </html>
   )
