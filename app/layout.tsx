@@ -69,9 +69,11 @@ export default function RootLayout({
             gtag('config', 'AW-18081709744');
           `}
         </Script>
+        
+        {/* Event snippet for Kattint és hív conversion page */}
         <Script id="gtag-report-conversion" strategy="afterInteractive">
           {`
-            window.gtag_report_conversion = function(url) {
+            function gtag_report_conversion(url) {
               var callback = function () {
                 if (typeof(url) != 'undefined') {
                   window.location = url;
