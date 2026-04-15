@@ -58,7 +58,7 @@ export default function RootLayout({
 
         {/* --- Google Tag (gtag.js) --- */}
         <Script
-          src="https://www.googletagmanager.com/gtag/js?id=AW-18081709744"
+          src="https://www.googletagmanager.com/gtag/js?id=AW-18042176502"
           strategy="afterInteractive"
         />
         <Script id="gtag-base" strategy="afterInteractive">
@@ -66,7 +66,7 @@ export default function RootLayout({
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'AW-18081709744');
+            gtag('config', 'AW-18042176502');
           `}
         </Script>
 
@@ -81,7 +81,7 @@ export default function RootLayout({
               };
               if (typeof window.gtag === 'function') {
                 window.gtag('event', 'conversion', {
-                  'send_to': 'AW-18081709744/cuvUCI6KoZocELD9g65D',
+                  'send_to': 'AW-18042176502/NB1pCOvt1ZwcEPaHl5tD',
                   'event_callback': callback
                 });
               } else {
@@ -115,7 +115,7 @@ export default function RootLayout({
                       window.gtag_report_conversion();
                     } else if (typeof window.gtag === 'function') {
                       window.gtag('event', 'conversion', {
-                        'send_to': 'AW-18081709744/cuvUCI6KoZocELD9g65D'
+                        'send_to': 'AW-18042176502/NB1pCOvt1ZwcEPaHl5tD'
                       });
                     }
                   } catch (err) {}
