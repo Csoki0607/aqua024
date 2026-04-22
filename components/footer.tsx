@@ -5,7 +5,7 @@ import { Phone, Mail, MapPin, Clock, Droplets } from "lucide-react"
 
 const PHONE_NUMBER = "+36305988450"
 const PHONE_DISPLAY = "+36 30 598 8450"
-const EMAIL = "aqva.info@gmail.com"
+const EMAIL = "aqva.info1@gmail.com"
 
 const services = [
   { name: "Vízszerelő 0-24", href: "/vizszerelo-0-24" },
@@ -69,8 +69,8 @@ export function Footer() {
               Gyors, megbízható, professzionális.
             </p>
             <div className="flex flex-col gap-2 text-sm">
-              <a 
-                href={`tel:${PHONE_NUMBER}`} 
+              <a
+                href={`tel:${PHONE_NUMBER}`}
                 className="flex items-center gap-2 hover:text-secondary"
               >
                 <Phone className="h-4 w-4" />
@@ -140,10 +140,10 @@ export function Footer() {
           <p className="text-center text-sm text-primary-foreground/60 sm:text-left">
             &copy; {new Date().getFullYear()} Aqua024. Minden jog fenntartva.
           </p>
-          <a 
-            href="https://www.meriondigital.hu" 
-            target="_blank" 
-            rel="noopener noreferrer" 
+          <a
+            href="https://www.meriondigital.hu"
+            target="_blank"
+            rel="noopener noreferrer"
             className="group flex items-center gap-2 px-4 py-1.5 rounded-full bg-background/5 hover:bg-background/10 border border-transparent hover:border-background/10 transition-all duration-300"
           >
             <span className="text-xs text-background/40 group-hover:text-background/60 transition-colors">

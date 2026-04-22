@@ -3,7 +3,7 @@
 import { Phone, MessageSquare, Mail } from "lucide-react"
 
 const PHONE_NUMBER = "+36305988450"
-const EMAIL = "aqva.info@gmail.com"
+const EMAIL = "aqva.info1@gmail.com"
 
 export function MobileStickyBar() {
   return (

@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 
 const PHONE_NUMBER = "+36305988450"
 const PHONE_DISPLAY = "+36 30 598 8450"
-const EMAIL = "aqva.info@gmail.com"
+const EMAIL = "aqva.info1@gmail.com"
 
 const contactMethods = [
   {
