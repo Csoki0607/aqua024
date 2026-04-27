@@ -31,7 +31,7 @@ async function fetchSubscriptionStatus(siteId: string): Promise<SubscriptionStat
     const supabase = createClient(supabaseUrl, supabaseKey)
 
     const { data, error } = await supabase
-      .from("clients")
+      .from("merion_clients")
       .select("subscription_active, name")
       .eq("id", siteId)
       .single()
