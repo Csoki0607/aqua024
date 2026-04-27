@@ -95,7 +95,7 @@ export function SuspendedPage() {
           {/* Action Buttons */}
           <div className="flex flex-col gap-3 mb-8">
             <Link
-              href="https://www.meriondigital.hu/ugyfel"
+              href="https://ugyfelkapu.meriondigital.hu"
               target="_blank"
               rel="noopener noreferrer"
               className="group inline-flex items-center justify-center gap-3 px-6 py-4 rounded-xl text-base font-semibold transition-all duration-300"
