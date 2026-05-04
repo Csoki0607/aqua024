@@ -16,8 +16,8 @@ import { CTASection } from "@/components/cta-section"
 
 import { PhoneLink } from "@/components/phone-link"
 
-const PHONE_NUMBER = "+36305988450"
-const PHONE_DISPLAY = "+36 30 598 8450"
+const PHONE_NUMBER = "+36209624606"
+const PHONE_DISPLAY = "+36 20 962 4606"
 
 const trustFeatures = [
   {
@@ -46,7 +46,7 @@ const services = [
   {
     title: "Vízszerelő 0-24",
     description: "Sürgős esetek azonnali kezelése és tervezett munkálatok precíz kivitelezése.",
-    href: "/vizszerelo-0-24",
+    href: "/sos-vizszerelo-0-24",
     icon: Droplets
   },
   {
@@ -344,7 +344,7 @@ export default function HomePage() {
                     Válassza a biztonságot és a tartós eredményt! Szakértelmünk garantálja a tökéletesen működő otthont.
                   </p>
                   <div className="mt-auto flex flex-col gap-3 sm:flex-row">
-                    <Link href="/vizszerelo-0-24" className="inline-flex items-center text-sm font-bold text-secondary transition-colors hover:text-primary hover:underline">
+                    <Link href="/sos-vizszerelo-0-24" className="inline-flex items-center text-sm font-bold text-secondary transition-colors hover:text-primary hover:underline">
                       &rarr; Non-stop vízszerelő
                     </Link>
                     <Link href="/dugulaselharitas" className="inline-flex items-center text-sm font-bold text-secondary transition-colors hover:text-primary hover:underline">

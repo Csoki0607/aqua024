@@ -14,11 +14,11 @@ import { PhoneLink } from "@/components/phone-link"
 
 export const metadata: Metadata = {
   title: "Kapcsolat - Aqua024 Vízszerelő Budapest",
-  description: "Lépjen kapcsolatba velünk! Vízszerelő szolgáltatás Budapesten és 60 km-es körzetben. Telefon: +36 30 598 8450. 0-24 órás elérhetőség.",
+  description: "Lépjen kapcsolatba velünk! Vízszerelő szolgáltatás Budapesten és 60 km-es körzetben. Telefon: +36 20 962 4606. 0-24 órás elérhetőség.",
 }
 
-const PHONE_NUMBER = "+36305988450"
-const PHONE_DISPLAY = "+36 30 598 8450"
+const PHONE_NUMBER = "+36209624606"
+const PHONE_DISPLAY = "+36 20 962 4606"
 const EMAIL = "aqva.info1@gmail.com"
 
 const contactMethods = [

@@ -19,12 +19,12 @@ import { PhoneLink } from "@/components/phone-link"
 
 export const metadata: Metadata = {
   title: "Duguláselhárítás Budapest - WC, Lefolyó, Csatorna 0-24",
-  description: "Duguláselhárítás Budapesten és környékén. WC dugulás, lefolyó dugulás, csatorna tisztítás - gyorsan és tisztán. Hívjon: +36 30 598 8450",
+  description: "Duguláselhárítás Budapesten és környékén. WC dugulás, lefolyó dugulás, csatorna tisztítás - gyorsan és tisztán. Hívjon: +36 20 962 4606",
   keywords: ["duguláselhárítás", "wc dugulás", "lefolyó dugulás", "csatorna tisztítás", "Budapest", "azonnal"],
 }
 
-const PHONE_NUMBER = "+36305988450"
-const PHONE_DISPLAY = "+36 30 598 8450"
+const PHONE_NUMBER = "+36209624606"
+const PHONE_DISPLAY = "+36 20 962 4606"
 
 const blockageTypes = [
   {

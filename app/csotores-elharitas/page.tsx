@@ -18,12 +18,12 @@ import { PhoneLink } from "@/components/phone-link"
 
 export const metadata: Metadata = {
   title: "Csőtörés Elhárítás 0-24 Budapest - Azonnali Segítség",
-  description: "Csőtörés elhárítás Budapesten 0-24 órában. Azonnali kiszállás, vízkár megelőzés. Ne várjon - hívjon most: +36 30 598 8450. 1-2 órán belül ott vagyunk!",
+  description: "Csőtörés elhárítás Budapesten 0-24 órában. Azonnali kiszállás, vízkár megelőzés. Ne várjon - hívjon most: +36 20 962 4606. 1-2 órán belül ott vagyunk!",
   keywords: ["csőtörés", "csőtörés elhárítás", "csőtörés 0-24", "vízszivárgás", "Budapest", "sürgős"],
 }
 
-const PHONE_NUMBER = "+36305988450"
-const PHONE_DISPLAY = "+36 30 598 8450"
+const PHONE_NUMBER = "+36209624606"
+const PHONE_DISPLAY = "+36 20 962 4606"
 
 const emergencySteps = [
   {
@@ -34,7 +34,7 @@ const emergencySteps = [
   {
     step: 2,
     title: "Hívjon minket!",
-    description: "Tárcsázza a +36 30 598 8450 számot. 0-24 órában elérhetőek vagyunk, azonnal reagálunk.",
+    description: "Tárcsázza a +36 20 962 4606 számot. 0-24 órában elérhetőek vagyunk, azonnal reagálunk.",
   },
   {
     step: 3,

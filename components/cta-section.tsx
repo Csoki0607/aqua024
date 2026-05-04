@@ -2,8 +2,8 @@
 
 import { Phone, Clock, Shield, Zap } from "lucide-react"
 
-const PHONE_NUMBER = "+36305988450"
-const PHONE_DISPLAY = "+36 30 598 8450"
+const PHONE_NUMBER = "+36209624606"
+const PHONE_DISPLAY = "+36 20 962 4606"
 
 interface CTASectionProps {
   title?: string

@@ -19,8 +19,8 @@ export const metadata: Metadata = {
   description: "Ismerje meg az Aqua024 csapatát! 15+ év tapasztalat, 0-24 órás elérhetőség, megbízható vízszerelő szolgáltatás Budapesten és környékén.",
 }
 
-const PHONE_NUMBER = "+36305988450"
-const PHONE_DISPLAY = "+36 30 598 8450"
+const PHONE_NUMBER = "+36209624606"
+const PHONE_DISPLAY = "+36 20 962 4606"
 
 const stats = [
   { value: "15+", label: "Év tapasztalat" },

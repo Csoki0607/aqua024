@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     default: 'Aqua024 - Vízszerelő 0-24 Budapest | Azonnali Kiszállás',
     template: '%s | Aqua024'
   },
-  description: 'Non-stop vízszerelő szolgáltatás Budapest és 60 km-es körzetében. Csőtörés, duguláselhárítás, vízszivárgás - 1-2 órán belül nálad vagyunk! Hívj: +36 30 598 8450',
+  description: 'Non-stop vízszerelő szolgáltatás Budapest és 60 km-es körzetében. Csőtörés, duguláselhárítás, vízszivárgás - 1-2 órán belül nálad vagyunk! Hívj: +36 20 962 4606',
   keywords: ['vízszerelő', 'vízszerelő 0-24', 'nonstop vízszerelő', 'csőtörés', 'duguláselhárítás', 'Budapest', 'azonnal'],
   authors: [{ name: 'Aqua024' }],
   openGraph: {

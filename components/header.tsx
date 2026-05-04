@@ -5,8 +5,8 @@ import { usePathname } from "next/navigation"
 import { Phone, Menu, X, Droplets } from "lucide-react"
 import { useState, useEffect, useRef } from "react"
 
-const PHONE_NUMBER = "+36305988450"
-const PHONE_DISPLAY = "+36 30 598 8450"
+const PHONE_NUMBER = "+36209624606"
+const PHONE_DISPLAY = "+36 20 962 4606"
 
 const navigation = [
   { name: "Főoldal", href: "/" },
