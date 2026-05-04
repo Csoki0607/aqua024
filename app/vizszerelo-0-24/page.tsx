@@ -20,12 +20,12 @@ import { PhoneLink } from "@/components/phone-link"
 
 export const metadata: Metadata = {
   title: "Vízszerelő 0-24 Budapest - Non-stop Vízszerelő Azonnal",
-  description: "Non-stop vízszerelő szolgáltatás Budapesten és környékén. 0-24 órában, hétvégén is. Csőtörés, dugulás, vízszivárgás - 1-2 órán belül ott vagyunk! Hívjon: +36 30 598 8450",
+  description: "Non-stop vízszerelő szolgáltatás Budapesten és környékén. 0-24 órában, hétvégén is. Csőtörés, dugulás, vízszivárgás - 1-2 órán belül ott vagyunk! Hívjon: +36 20 962 4606",
   keywords: ["vízszerelő", "vízszerelő 0-24", "nonstop vízszerelő", "vízszerelő azonnal", "Budapest", "éjjeli vízszerelő"],
 }
 
-const PHONE_NUMBER = "+36305988450"
-const PHONE_DISPLAY = "+36 30 598 8450"
+const PHONE_NUMBER = "+36209624606"
+const PHONE_DISPLAY = "+36 20 962 4606"
 
 const services = [
   {
@@ -83,7 +83,7 @@ const processSteps = [
   {
     step: 1,
     title: "Hívás",
-    description: "Hívja a +36 30 598 8450 számot és írja le a problémát."
+    description: "Hívja a +36 20 962 4606 számot és írja le a problémát."
   },
   {
     step: 2,
@@ -430,7 +430,7 @@ export default function VizszereloPage() {
       {/* Final CTA */}
       <CTASection 
         title="Készen állunk!"
-        subtitle="Hívja a +36 30 598 8450 számot és azonnal segítünk."
+        subtitle="Hívja a +36 20 962 4606 számot és azonnal segítünk."
         variant="secondary"
       />
     </>
