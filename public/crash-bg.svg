@@ -1,0 +1,80 @@
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    @keyframes pulse {
+      0%, 100% { opacity: 0.1; }
+      50% { opacity: 0.3; }
+    }
+    @keyframes float {
+      0% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-20px) rotate(5deg); }
+      100% { transform: translateY(0) rotate(0deg); }
+    }
+    @keyframes glitch-x {
+      0% { transform: translate(960px, 540px); }
+      2% { transform: translate(962px, 538px); }
+      4% { transform: translate(958px, 542px); }
+      6% { transform: translate(960px, 540px); }
+      100% { transform: translate(960px, 540px); }
+    }
+    .pulse { animation: pulse 4s infinite; }
+    .float { animation: float 6s ease-in-out infinite; }
+    .glitch-x { animation: glitch-x 3s infinite; }
+  </style>
+  <defs>
+    <radialGradient id="grad" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" style="stop-color:#0f172a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#020617;stop-opacity:1" />
+    </radialGradient>
+    
+    <!-- Abstract Pattern - Dots -->
+    <pattern id="dots" width="60" height="60" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="rgba(56, 189, 248, 0.15)" />
+    </pattern>
+
+    <!-- Merion "M" Symbol Definition -->
+    <symbol id="merion-m" viewBox="0 0 100 100">
+      <path d="M20 80V20L50 50L80 20V80" stroke="currentColor" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    </symbol>
+  </defs>
+  
+  <!-- Background Layers -->
+  <rect width="1920" height="1080" fill="url(#grad)" />
+  <rect width="1920" height="1080" fill="url(#dots)" />
+  
+  <!-- Large Center Graphic (The Red X) -->
+  <g class="glitch-x" opacity="0.1">
+    <circle r="300" stroke="#38bdf8" stroke-width="2" fill="none" />
+    <circle r="350" stroke="#38bdf8" stroke-width="1" fill="none" stroke-dasharray="10 20" />
+    <path d="M-200,-200 L200,200 M200,-200 L-200,200" stroke="#ef4444" stroke-width="40" stroke-linecap="round" />
+  </g>
+
+  <!-- Floating Merion Logos (Moving Parts) -->
+  <g color="#38bdf8">
+    <use href="#merion-m" x="100" y="200" width="120" height="120" opacity="0.03" class="float" style="animation-delay: 0s"/>
+    <use href="#merion-m" x="1600" y="150" width="150" height="150" opacity="0.02" class="float" style="animation-delay: 1s"/>
+    <use href="#merion-m" x="400" y="700" width="100" height="100" opacity="0.03" class="float" style="animation-delay: 2s"/>
+    <use href="#merion-m" x="1400" y="800" width="180" height="180" opacity="0.02" class="float" style="animation-delay: 3s"/>
+    <use href="#merion-m" x="900" y="100" width="80" height="80" opacity="0.04" class="float" style="animation-delay: 4s"/>
+  </g>
+
+  <!-- Technical Text Bits -->
+  <g font-family="monospace" font-size="12" fill="#38bdf8" opacity="0.2">
+    <text x="50" y="50" class="pulse">CRITICAL_SYSTEM_SUSPENSION...</text>
+    <text x="50" y="70">AUTH_STATUS: DENIED</text>
+    <text x="1700" y="1000">LINK_CHECK: FAILED</text>
+    <text x="1700" y="1020" class="pulse">REASON: UNPAID_INVOICE</text>
+    
+    <text x="100" y="500" opacity="0.05" font-size="80" font-weight="bold">SUSPENDED</text>
+    <text x="1350" y="600" opacity="0.05" font-size="80" font-weight="bold">402_REQUIRED</text>
+  </g>
+
+  <!-- Glitchy Lines -->
+  <g opacity="0.05">
+    <rect x="0" y="150" width="1920" height="1" fill="#ef4444">
+      <animate attributeName="y" values="150;160;150" dur="0.1s" repeatCount="indefinite" />
+    </rect>
+    <rect x="0" y="850" width="1920" height="1" fill="#38bdf8">
+      <animate attributeName="y" values="850;840;850" dur="0.15s" repeatCount="indefinite" />
+    </rect>
+  </g>
+</svg>
