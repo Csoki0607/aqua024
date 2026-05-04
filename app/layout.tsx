@@ -43,9 +43,52 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Aqua024",
+    "image": "https://aqua024.hu/images/hero-plumber.avif",
+    "@id": "https://aqua024.hu",
+    "url": "https://aqua024.hu",
+    "telephone": "+36209624606",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "",
+      "addressLocality": "Budapest",
+      "postalCode": "",
+      "addressCountry": "HU"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 47.4979,
+      "longitude": 19.0402
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+      ],
+      "opens": "00:00",
+      "closes": "23:59"
+    },
+    "sameAs": [],
+    "priceRange": "$$",
+    "description": "Non-stop vízszerelő szolgáltatás Budapesten és környékén. Csőtörés elhárítás, duguláselhárítás, vízszerelés 0-24."
+  }
+
   return (
     <html lang="hu">
       <body className={`${inter.variable} font-sans antialiased`}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <SubscriptionWrapper>
           <Header />
           <main>
